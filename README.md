@@ -1,18 +1,15 @@
 # MTGLandCalculator
-tool to provide an estimate on land colors for mtg decks (In PROGRESS)
+CLI to get the best land distribution for a mtg deck allong with recomendations that similar decks are using
 
-# Instructions
+built using the [scryfall API](https://scryfall.com/docs/api)
+
+# Requirements
 - python3 required
-- pipenv to run env and install
-```
-pip install pipenv
-pipenv shell
-pipenv install
-```
+- - [pipenv installed](https://pypi.org/project/pipenv/)
 
-- deck txt needed in folder (Pending Change)
 
-## TODO
-- [ ] Ask for path to deck file
-- [ ] check whether dummy lands are added
-- [ ] put this on a webApp
+## GOALS
+- [ ] Make this a CLI
+- [ ] get PATH to txt deck file
+- [ ] get similar decks
+- [ ] get recommendations from different pages
