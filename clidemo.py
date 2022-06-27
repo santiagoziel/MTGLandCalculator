@@ -1,17 +1,20 @@
 import typer
 
 
-def main(name: str, lastname: str = "", formal: bool = False):
-    """
-    Say hi to NAME, optionally with a --lastname.
-
-    If --formal is used, say hi very formally.
-    """
-    if formal:
-        typer.echo(f"Good day Ms. {name} {lastname}.")
+def print_color(good: bool = True):
+    message_start = "everything is "
+    if good:
+        typer.secho("good", fg="green")
+        #or in one line
+        #typer.secho(message_start + "good", fg="green")
     else:
-        typer.echo(f"Hello {name} {lastname}")
+        typer.secho("bad", fg="white", bg="red", blink = True)
+    message = message_start + ending
+    typer.echo(message)
 
+
+def main():
+    typer.echo(f"Here is something written to standard error", err=True)
 
 if __name__ == "__main__":
     typer.run(main)
