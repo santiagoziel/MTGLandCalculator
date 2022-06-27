@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 headers = {
 "authority": "www.mtggoldfish.com",
 "method": "GET",
@@ -9,5 +10,14 @@ headers = {
 "accept-language": "es-419,es;q=0.9",
 "user-agent": "Lands Calculation APP by santiagoziel"
 }
+
 r = requests.get('https://www.mtggoldfish.com/deck/4911176#online',  headers=headers)
-print(r.text)
+soup = BeautifulSoup(r.text, 'html.parser')
+table = soup.find("table", {"class": "deck-view-deck-table"})
+cards = table.find_all("tr", {'class': None})
+
+for card in cards:
+    number = card.find("td", {'class':"text-right"}).string.strip()
+    data = card.find("span", {'class':'card_id card_name'}).find("a").string.strip()
+
+    print(f"card: {data} has {number} copies")
