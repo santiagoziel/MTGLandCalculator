@@ -1,15 +1,18 @@
 # MTGLandCalculator
-CLI to get the best land distribution for a mtg deck allong with recomendations that similar decks are using
+web app to get the best land distribution for a mtg deck along with recommendations that similar decks are using
 
-built using the [scryfall API](https://scryfall.com/docs/api)
+built using the [scryfall API](https://scryfall.com/docs/api) and getting info from [mtggoldfish](www.mtggoldfish.com)
+
 
 # Requirements
 - python3 required
-- - [pipenv installed](https://pypi.org/project/pipenv/)
+- [pipenv installed](https://pypi.org/project/pipenv/)
 
 
 ## GOALS
-- [ ] Make this a CLI
-- [ ] get PATH to txt deck file
-- [ ] get similar decks
-- [ ] get recommendations from different pages
+- [ ] get most important cards form txt file
+- [x] get color identity of txt file
+- [ ] get deck list that contain those cards (Almost done)
+- [ ] get lands from recommended decks
+- [x] generate basic recommendation
+- [ ] generate full recommendation
