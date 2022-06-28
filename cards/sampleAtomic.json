@@ -349,6 +349,765 @@
                "Sorcery"
             ]
          }
+      ],
+      "Access Tunnel":[
+         {
+            "colorIdentity":[
+
+            ],
+            "colors":[
+
+            ],
+            "convertedManaCost":0.0,
+            "edhrecRank":1376,
+            "foreignData":[
+               {
+                  "flavorText":"Oriq-Agenten halten sich in den dunklen Winkeln von Arcavios auf, unerkannt und doch allgegenwärtig.",
+                  "language":"German",
+                  "name":"Zugangstunnel",
+                  "text":"{T}: Erzeuge {C}.\n{3}, {T}: Eine Kreatur deiner Wahl mit Stärke 3 oder weniger kann in diesem Zug nicht geblockt werden.",
+                  "type":"Land"
+               },
+               {
+                  "flavorText":"Los agentes de los Oriq permanecen en los recovecos sombríos de Arcavios, inadvertidos pero siempre presentes.",
+                  "language":"Spanish",
+                  "name":"Túnel de acceso",
+                  "text":"{T}: Agrega {C}.\n{3}, {T}: La criatura objetivo con fuerza de 3 o menos no puede ser bloqueada este turno.",
+                  "type":"Tierra"
+               },
+               {
+                  "flavorText":"Les agents de l'Oriq restent dans les recoins les plus sombres d'Arcavios, invisibles, mais omniprésents.",
+                  "language":"French",
+                  "name":"Tunnel d'accès",
+                  "text":"{T} : Ajoutez {C}.\n{3}, {T} : Une créature ciblée de force inférieure ou égale à 3 ne peut pas être bloquée ce tour-ci.",
+                  "type":"Terrain"
+               },
+               {
+                  "flavorText":"Gli agenti Oriq si celano negli angoli bui di Arcavios, inosservati ma sempre presenti.",
+                  "language":"Italian",
+                  "name":"Tunnel d'Accesso",
+                  "text":"{T}: Aggiungi {C}.\n{3}, {T}: Una creatura bersaglio con forza pari o inferiore a 3 non può essere bloccata in questo turno.",
+                  "type":"Terra"
+               },
+               {
+                  "flavorText":"オリークの手先はアルケヴィオス中の暗い隅にいる。人目につかないが常に存在している。",
+                  "language":"Japanese",
+                  "name":"接続トンネル",
+                  "text":"{T}：{C}を加える。\n{3}, {T}：パワーが３以下のクリーチャー１体を対象とする。このターン、それはブロックされない。",
+                  "type":"土地"
+               },
+               {
+                  "flavorText":"오리크 요원들은 아르카비오스의 어두운 구석에 숨어 있으며, 눈에 띄지는 않지만 언제나 그곳에 있다.",
+                  "language":"Korean",
+                  "name":"접근 터널",
+                  "text":"{T}: {C}를 추가한다.\n{3}, {T}: 공격력이 3 이하인 생물을 목표로 정한다. 이 턴에 그 생물은 방어될 수 없다.",
+                  "type":"대지"
+               },
+               {
+                  "flavorText":"Os agentes Oriq preferem os cantos escuros de Arcávios, invisíveis, mas sempre presentes.",
+                  "language":"Portuguese (Brazil)",
+                  "name":"Túnel de Acesso",
+                  "text":"{T}: Adicione {C}.\n{3}, {T}: A criatura alvo com poder igual ou inferior a 3 não pode ser bloqueada neste turno.",
+                  "type":"Terreno"
+               },
+               {
+                  "flavorText":"Агенты Орика держатся в темных углах Аркавиоса — невидимые, но постоянно присутствующие.",
+                  "language":"Russian",
+                  "name":"Входной Туннель",
+                  "text":"{T}: добавьте {C}.\n{3}, {T}: целевое существо с силой 3 или меньше не может быть заблокировано в этом ходу.",
+                  "type":"Земля"
+               },
+               {
+                  "flavorText":"欧理可众密探潜伏在阿凯维沃的黑暗角落，难见踪影却无处不在。",
+                  "language":"Chinese Simplified",
+                  "name":"入口通道",
+                  "text":"{T}：加{C}。\n{3}，{T}：目标力量等于或小于3的生物本回合不能被阻挡。",
+                  "type":"地"
+               },
+               {
+                  "flavorText":"歐理可眾密探潛伏在阿凱維沃的黑暗角落，難見蹤影卻無處不在。",
+                  "language":"Chinese Traditional",
+                  "name":"入口通道",
+                  "text":"{T}：加{C}。\n{3}，{T}：目標力量等於或小於3的生物本回合不能被阻擋。",
+                  "type":"地"
+               }
+            ],
+            "identifiers":{
+               "scryfallOracleId":"ed9cc560-f30b-4b60-a094-ccf93ed656a7"
+            },
+            "layout":"normal",
+            "legalities":{
+               "alchemy":"Legal",
+               "brawl":"Legal",
+               "commander":"Legal",
+               "duel":"Legal",
+               "explorer":"Legal",
+               "future":"Legal",
+               "gladiator":"Legal",
+               "historic":"Legal",
+               "historicbrawl":"Legal",
+               "legacy":"Legal",
+               "modern":"Legal",
+               "pioneer":"Legal",
+               "standard":"Legal",
+               "vintage":"Legal"
+            },
+            "manaValue":0.0,
+            "name":"Access Tunnel",
+            "printings":[
+               "STX"
+            ],
+            "purchaseUrls":{
+               "cardKingdom":"https://mtgjson.com/links/58f35630ede48564",
+               "cardKingdomFoil":"https://mtgjson.com/links/5b914f21c356fc4d",
+               "cardmarket":"https://mtgjson.com/links/4b03b9b27ffd67e4",
+               "tcgplayer":"https://mtgjson.com/links/6dd74728290b8468"
+            },
+            "rulings":[
+               {
+                  "date":"2021-04-16",
+                  "text":"Once a creature with power 3 or less has been blocked, Access Tunnel’s second ability won’t cause it to become unblocked."
+               },
+               {
+                  "date":"2021-04-16",
+                  "text":"If the target creature’s power is greater than 3 as Access Tunnel’s second ability tries to resolve, the ability doesn’t resolve. However, if instead the creature’s power is raised above 3 after the ability resolves, it still can’t be blocked that turn."
+               }
+            ],
+            "subtypes":[
+
+            ],
+            "supertypes":[
+
+            ],
+            "text":"{T}: Add {C}.\n{3}, {T}: Target creature with power 3 or less can't be blocked this turn.",
+            "type":"Land",
+            "types":[
+               "Land"
+            ]
+         }
+      ],
+      "Agadeem's Awakening // Agadeem, the Undercrypt":[
+         {
+            "colorIdentity":[
+               "B"
+            ],
+            "colors":[
+               "B"
+            ],
+            "convertedManaCost":3.0,
+            "edhrecRank":22113,
+            "faceName":"Agadeem's Awakening",
+            "foreignData":[
+               {
+                  "faceName":"Agadeems Erwachen",
+                  "flavorText":"„Jetzt ist die Stunde des Todes, kurz vor Sonnenaufgang. Wacht auf, Schläfer, und holt die Lebenden!\"\n—Vivias, Totenflüsterer",
+                  "language":"German",
+                  "name":"Agadeems Erwachen // Agadeems Unterkrypta",
+                  "text":"Bringe eine beliebige Anzahl an Kreaturenkarten deiner Wahl mit unterschiedlichen umgewandelten Manakosten von jeweils X oder weniger aus deinem Friedhof ins Spiel zurück.\nLand\n{T}: Erzeuge {B}.",
+                  "type":"Hexerei"
+               },
+               {
+                  "faceName":"Despertar de Agadeem",
+                  "flavorText":"\"Es la hora de la muerte; justo antes de que amanezca. ¡Despierten, durmientes, y den caza a los vivos!\".\n—Vivias, receptáculo de brujo",
+                  "language":"Spanish",
+                  "name":"Despertar de Agadeem // Cripta subterránea de Agadeem",
+                  "text":"Regresa de tu cementerio al campo de batalla cualquier cantidad de cartas de criatura objetivo que tengan cada una un coste de maná convertido de X o menos diferente.\nTierra\n{T}: Agrega {B}.",
+                  "type":"Conjuro"
+               },
+               {
+                  "faceName":"Éveil d'Agadeem",
+                  "flavorText":"« C'est l'heure de la mort, juste avant l'aube. Réveillez-vous, dormeurs, et hantez les vivants ! »\n—Vivias, hôte sorcière",
+                  "language":"French",
+                  "name":"Éveil d'Agadeem // Agadeem, la crypte inférieure",
+                  "text":"Renvoyez sur le champ de bataille depuis votre cimetière n'importe quel nombre de cartes de créature ciblées ayant chacune un coût converti de mana différent inférieur ou égal à X.\nTerrain\n{T} : Ajoutez {B}.",
+                  "type":"Rituel"
+               },
+               {
+                  "faceName":"Risveglio di Agadeem",
+                  "flavorText":"\"Questa è l'ora della morte, subito prima dell'alba. Svegliatevi, dormienti, e tormentate i vivi!\"\n—Vivias, strega intermediaria",
+                  "language":"Italian",
+                  "name":"Risveglio di Agadeem // Agadeem, la Cripta Sotterranea",
+                  "text":"Rimetti dal tuo cimitero sul campo di battaglia un qualsiasi numero di carte creatura bersaglio che hanno ciascuna un costo di mana convertito diverso pari o inferiore a X.\nTerra\n{T}: Aggiungi {B}.",
+                  "type":"Stregoneria"
+               },
+               {
+                  "faceName":"アガディームの覚醒",
+                  "flavorText":"「今は死の刻。もうすぐ夜明け。起きろ、眠れる者よ。生者に憑いてこい。」\n――魔法使いの器、ヴィヴィアス",
+                  "language":"Japanese",
+                  "name":"アガディームの覚醒 // 地下遺跡、アガディーム",
+                  "text":"あなたの墓地から望む枚数のクリーチャー・カードを、それぞれの点数で見たマナ・コストがＸ以下かつ互いに異なるように対象とする。それらを戦場に戻す。\n土地\n{T}：{B}を加える。",
+                  "type":"ソーサリー"
+               },
+               {
+                  "faceName":"아가딤의 각성",
+                  "flavorText":"\"지금은 새벽이 되기 직전인, 죽음의 시간이다. 잠든 자들아, 이제 깨어나 산 자들을 덮치거라!\"\n—마녀의 그릇, 비비아스",
+                  "language":"Korean",
+                  "name":"아가딤의 각성 // 지하묘지, 아가딤",
+                  "text":"당신의 무덤에 있는 전환마나비용이 서로 다르며 전환마나비용이 X이하인 생물 카드들을 원하는 수만큼 목표로 정한다. 그 카드들을 전장으로 되돌린다.\n대지\n{T}: {B}를 추가한다.",
+                  "type":"집중마법"
+               },
+               {
+                  "faceName":"Despertar de Agadeem",
+                  "flavorText":"\"Essa é a hora da morte, logo antes do amanhecer. Despertem, adormecidos, e assombrem os vivos!\"\n— Vivias, bruxa mediúnica",
+                  "language":"Portuguese (Brazil)",
+                  "name":"Despertar de Agadeem // Agadeem, a Subcripta",
+                  "text":"Devolva de seu cemitério para o campo de batalha qualquer número de cards de criatura alvo que tenham, cada um, um custo de mana convertido igual ou inferior a X diferente.\nTerreno\n{T}: Adicione {B}.",
+                  "type":"Feitiço"
+               },
+               {
+                  "faceName":"Пробуждение Агадима",
+                  "flavorText":"«Перед рассветом всегда приходит час смерти. Восстаньте же, спящие, и ступайте в мир живых!»\n— Вивиус, ведьма-вместилище",
+                  "language":"Russian",
+                  "name":"Пробуждение Агадима // Агадим, Подземный Склеп",
+                  "text":"Верните из вашего кладбища на поле битвы любое количество целевых карт существ с различными конвертированными мана-стоимостями, каждая из которых не более X.",
+                  "type":"Волшебство"
+               },
+               {
+                  "faceName":"艾格丁觉醒",
+                  "flavorText":"「现在正是拂晓之前的死亡时刻。觉醒吧，沉睡者，齐去侵扰生灵！」\n～祟体女巫威皮斯",
+                  "language":"Chinese Simplified",
+                  "name":"艾格丁觉醒 // 地底墓穴艾格丁",
+                  "text":"选择任意数量目标在你坟墓场中的生物牌，其总法术力费用须各不相同且均须等于或小于X。将它们从该处移回战场。\n地\n{T}：加{B}。",
+                  "type":"法术"
+               },
+               {
+                  "faceName":"艾格丁覺醒",
+                  "flavorText":"「現在正是拂曉之前的死亡時刻。覺醒吧，沉睡者，齊去侵擾生靈！」\n～祟體女巫威皮斯",
+                  "language":"Chinese Traditional",
+                  "name":"艾格丁覺醒 // 地底墓穴艾格丁",
+                  "text":"選擇任意數量目標在你墳墓場中的生物牌，其總魔法力費用須各不相同且均須等於或小於X。將它們從該處移回戰場。\n地\n{T}：加{B}。",
+                  "type":"巫術"
+               }
+            ],
+            "identifiers":{
+               "scryfallOracleId":"562d71b9-1646-474e-9293-55da6947a758"
+            },
+            "layout":"modal_dfc",
+            "legalities":{
+               "alchemy":"Legal",
+               "brawl":"Legal",
+               "commander":"Legal",
+               "duel":"Legal",
+               "explorer":"Legal",
+               "future":"Legal",
+               "gladiator":"Legal",
+               "historic":"Legal",
+               "historicbrawl":"Legal",
+               "legacy":"Legal",
+               "modern":"Legal",
+               "pioneer":"Legal",
+               "standard":"Legal",
+               "vintage":"Legal"
+            },
+            "manaCost":"{X}{B}{B}{B}",
+            "manaValue":3.0,
+            "name":"Agadeem's Awakening // Agadeem, the Undercrypt",
+            "printings":[
+               "PRM",
+               "PZNR",
+               "ZNR"
+            ],
+            "purchaseUrls":{
+
+            },
+            "rulings":[
+               {
+                  "date":"2020-09-25",
+                  "text":"There is a single triangle icon in the top left corner of the front face. There is a double triangle icon in the top left corner of the back face."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"To determine whether it is legal to play a modal double-faced card, consider only the characteristics of the face you’re playing and ignore the other face’s characteristics."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect allows you to play a specific modal double-faced card, you may cast it as a spell or play it as a land, as determined by which face you choose to play. If an effect allows you to cast (rather than “play”) a specific modal double-faced card, you can’t play it as a land."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect allows you to play a land or cast a spell from among a group of cards, you may play or cast a modal double-faced card with any face that fits the criteria of that effect."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"The mana value of a modal double-faced card is based on the characteristics of the face that’s being considered. On the stack and battlefield, consider whichever face is up. In all other zones, consider only the front face. This is different than how the mana value of a transforming double-faced card is determined."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"A modal double-faced card can’t be transformed or be put onto the battlefield transformed. Ignore any instruction to transform a modal double-faced card or to put one onto the battlefield transformed."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect puts a double-faced card onto the battlefield, it enters with its front face up. If that front face can’t be put onto the battlefield, it doesn’t enter the battlefield."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect instructs a player to choose a card name, the name of either face may be chosen. If that effect or a linked ability refers to a spell with the chosen name being cast and/or a land with the chosen name being played, it considers only the chosen name, not the other face’s name."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"In the Commander variant, a double-faced card’s color identity is determined by the mana costs and mana symbols in the rules text of both faces combined. If either face has a color indicator or basic land type, those are also considered."
+               }
+            ],
+            "side":"a",
+            "subtypes":[
+
+            ],
+            "supertypes":[
+
+            ],
+            "text":"Return from your graveyard to the battlefield any number of target creature cards that each have a different mana value X or less.",
+            "type":"Sorcery",
+            "types":[
+               "Sorcery"
+            ]
+         },
+         {
+            "colorIdentity":[
+               "B"
+            ],
+            "colors":[
+
+            ],
+            "convertedManaCost":0.0,
+            "edhrecRank":22113,
+            "faceName":"Agadeem, the Undercrypt",
+            "foreignData":[
+               {
+                  "faceName":"Agadeems Unterkrypta",
+                  "flavorText":"„Hier unter den Polyederfeldern liegen Seelen und Geheimnisse begraben.\"\n—Vivias, Totenflüsterer",
+                  "language":"German",
+                  "name":"Agadeems Erwachen // Agadeems Unterkrypta",
+                  "text":"Sowie Agadeems Unterkrypta ins Spiel kommt, kannst du 3 Lebenspunkte bezahlen. Falls du dies nicht tust, kommt sie getappt ins Spiel.\n{T}: Erzeuge {B}.\nHexerei\n{X}{B}{B}{B}",
+                  "type":"Land"
+               },
+               {
+                  "faceName":"Cripta subterránea de Agadeem",
+                  "flavorText":"\"Aquí, bajo los campos de edros, las almas y los secretos yacen sepultados\".\n—Vivias, receptáculo de brujo",
+                  "language":"Spanish",
+                  "name":"Despertar de Agadeem // Cripta subterránea de Agadeem",
+                  "text":"En cuanto la Cripta subterránea de Agadeem entre al campo de batalla, puedes pagar 3 vidas. Si no lo haces, entra al campo de batalla girada.\n{T}: Agrega {B}.\nConjuro\n{X}{B}{B}{B}",
+                  "type":"Tierra"
+               },
+               {
+                  "faceName":"Agadeem, la crypte inférieure",
+                  "flavorText":"« Là sous les champs d'hèdrons, sont enterrés âmes et secrets. »\n—Vivias, hôte sorcière",
+                  "language":"French",
+                  "name":"Éveil d'Agadeem // Agadeem, la crypte inférieure",
+                  "text":"Au moment où Agadeem, la crypte inférieure arrive sur le champ de bataille, vous pouvez payer 3 points de vie. Si vous ne le faites pas, elle arrive sur le champ de bataille engagée.\n{T} : Ajoutez {B}.\nRituel\n{X}{B}{B}{B}",
+                  "type":"Terrain"
+               },
+               {
+                  "faceName":"Agadeem, la Cripta Sotterranea",
+                  "flavorText":"\"Qui, sotto i campi di edri, giacciono sepolti anime e segreti.\"\n—Vivias, strega intermediaria",
+                  "language":"Italian",
+                  "name":"Risveglio di Agadeem // Agadeem, la Cripta Sotterranea",
+                  "text":"Mentre Agadeem, la Cripta Sotterranea entra nel campo di battaglia, puoi pagare 3 punti vita. Se non lo fai, entra nel campo di battaglia TAPpata.\n{T}: Aggiungi {B}.\nStregoneria\n{X}{B}{B}{B}",
+                  "type":"Terra"
+               },
+               {
+                  "faceName":"地下遺跡、アガディーム",
+                  "flavorText":"「面晶体原の地下には魂と秘密が葬られているのさ。」\n――魔法使いの器、ヴィヴィアス",
+                  "language":"Japanese",
+                  "name":"アガディームの覚醒 // 地下遺跡、アガディーム",
+                  "text":"地下遺跡、アガディームが戦場に出るに際し、あなたは３点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。\n{T}：{B}を加える。\nソーサリー\n{X}{B}{B}{B}",
+                  "type":"土地"
+               },
+               {
+                  "faceName":"지하묘지, 아가딤",
+                  "flavorText":"\"다면체 지역의 땅 속 깊은 곳에, 영혼과 비밀들이 묻혀 있다.\"\n—마녀의 그릇, 비비아스",
+                  "language":"Korean",
+                  "name":"아가딤의 각성 // 지하묘지, 아가딤",
+                  "text":"지하묘지, 아가딤이 전장에 들어오면서, 당신은 생명 3점을 지불할 수 있다. 그러지 않으면, 아가딤은 탭된 채로 전장에 들어온다.\n{T}: {B}를 추가한다.\n집중마법\n{X}{B}{B}{B}",
+                  "type":"대지"
+               },
+               {
+                  "faceName":"Agadeem, a Subcripta",
+                  "flavorText":"\"Aqui, sob os campos de edro, jazem sepultos almas e segredos.\"\n— Vivias, bruxa mediúnica",
+                  "language":"Portuguese (Brazil)",
+                  "name":"Despertar de Agadeem // Agadeem, a Subcripta",
+                  "text":"Conforme Agadeem, a Subcripta, entra no campo de batalha, você pode pagar 3 pontos de vida. Se não fizer isso, ela entrará no campo de batalha virada.\n{T}: Adicione {B}.\nFeitiço\n{X}{B}{B}{B}",
+                  "type":"Terreno"
+               },
+               {
+                  "faceName":"Агадим, Подземный Склеп",
+                  "flavorText":"«Здесь, под эдровыми полями, погребены души и тайны».\n— Вивиус, ведьма-вместилище",
+                  "language":"Russian",
+                  "name":"Пробуждение Агадима // Агадим, Подземный Склеп",
+                  "text":"При выходе Агадима, Подземного Склепа на поле битвы вы можете заплатить 3 жизни. Если вы этого не делаете, он выходит на поле битвы повернутым.\n{T}: добавьте {B}.",
+                  "type":"Земля"
+               },
+               {
+                  "faceName":"地底墓穴艾格丁",
+                  "flavorText":"「晶石原野之下，灵魂与秘密埋藏其间。」\n～祟体女巫威皮斯",
+                  "language":"Chinese Simplified",
+                  "name":"艾格丁觉醒 // 地底墓穴艾格丁",
+                  "text":"于地底墓穴艾格丁进战场时，你可以支付3点生命。如果你未如此作，则它须横置进战场。\n{T}：加{B}。\n法术\n{X}{B}{B}{B}",
+                  "type":"地"
+               },
+               {
+                  "faceName":"地底墓穴艾格丁",
+                  "flavorText":"「晶石原野之下，靈魂與秘密埋藏其間。」\n～祟體女巫威皮斯",
+                  "language":"Chinese Traditional",
+                  "name":"艾格丁覺醒 // 地底墓穴艾格丁",
+                  "text":"於地底墓穴艾格丁進戰場時，你可以支付3點生命。如果你未如此作，則它須橫置進戰場。\n{T}：加{B}。\n巫術\n{X}{B}{B}{B}",
+                  "type":"地"
+               }
+            ],
+            "identifiers":{
+               "scryfallOracleId":"562d71b9-1646-474e-9293-55da6947a758"
+            },
+            "layout":"modal_dfc",
+            "legalities":{
+               "alchemy":"Legal",
+               "brawl":"Legal",
+               "commander":"Legal",
+               "duel":"Legal",
+               "explorer":"Legal",
+               "future":"Legal",
+               "gladiator":"Legal",
+               "historic":"Legal",
+               "historicbrawl":"Legal",
+               "legacy":"Legal",
+               "modern":"Legal",
+               "pioneer":"Legal",
+               "standard":"Legal",
+               "vintage":"Legal"
+            },
+            "manaValue":0.0,
+            "name":"Agadeem's Awakening // Agadeem, the Undercrypt",
+            "printings":[
+               "PRM",
+               "PZNR",
+               "ZNR"
+            ],
+            "purchaseUrls":{
+
+            },
+            "rulings":[
+               {
+                  "date":"2020-09-25",
+                  "text":"There is a single triangle icon in the top left corner of the front face. There is a double triangle icon in the top left corner of the back face."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"To determine whether it is legal to play a modal double-faced card, consider only the characteristics of the face you’re playing and ignore the other face’s characteristics."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect allows you to play a specific modal double-faced card, you may cast it as a spell or play it as a land, as determined by which face you choose to play. If an effect allows you to cast (rather than “play”) a specific modal double-faced card, you can’t play it as a land."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect allows you to play a land or cast a spell from among a group of cards, you may play or cast a modal double-faced card with any face that fits the criteria of that effect."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"The mana value of a modal double-faced card is based on the characteristics of the face that’s being considered. On the stack and battlefield, consider whichever face is up. In all other zones, consider only the front face. This is different than how the mana value of a transforming double-faced card is determined."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"A modal double-faced card can’t be transformed or be put onto the battlefield transformed. Ignore any instruction to transform a modal double-faced card or to put one onto the battlefield transformed."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect puts a double-faced card onto the battlefield, it enters with its front face up. If that front face can’t be put onto the battlefield, it doesn’t enter the battlefield."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"If an effect instructs a player to choose a card name, the name of either face may be chosen. If that effect or a linked ability refers to a spell with the chosen name being cast and/or a land with the chosen name being played, it considers only the chosen name, not the other face’s name."
+               },
+               {
+                  "date":"2020-09-25",
+                  "text":"In the Commander variant, a double-faced card’s color identity is determined by the mana costs and mana symbols in the rules text of both faces combined. If either face has a color indicator or basic land type, those are also considered."
+               }
+            ],
+            "side":"b",
+            "subtypes":[
+
+            ],
+            "supertypes":[
+
+            ],
+            "text":"As Agadeem, the Undercrypt enters the battlefield, you may pay 3 life. If you don't, it enters the battlefield tapped.\n{T}: Add {B}.",
+            "type":"Land",
+            "types":[
+               "Land"
+            ]
+         }
+      ],
+      "Alpine Meadow":[
+         {
+            "colorIdentity":[
+               "R",
+               "W"
+            ],
+            "colors":[
+
+            ],
+            "convertedManaCost":0.0,
+            "edhrecRank":1699,
+            "foreignData":[
+               {
+                  "flavorText":"„Hier starb Rognar der Verwegene nach seinem hundert Tage langen Kampf mit dem Eisenschlund-Drachen. Wir errichteten diese Steine, um seine Ruhestätte zu markieren.\"\n—Iskene, Kannah-Geschichtenerzählerin",
+                  "language":"German",
+                  "name":"Almwiese",
+                  "text":"({T}: Erzeuge {R} oder {W}.)\nDie Almwiese kommt getappt ins Spiel.",
+                  "type":"Verschneites Land — Gebirge, Ebene"
+               },
+               {
+                  "flavorText":"\"Aquí pereció Rógnar el Temerario tras su batalla de cien días con el dragón Fauces de Hierro. Alzamos estas piedras para señalar su lugar de descanso\".\n—Iskene, cuentacuentos kannah",
+                  "language":"Spanish",
+                  "name":"Pradera alpina",
+                  "text":"({T}: Agrega {R} o {W}.)\nLa Pradera alpina entra al campo de batalla girada.",
+                  "type":"Tierra nevada — Montaña llanura"
+               },
+               {
+                  "flavorText":"« C'est ici qu'a péri Rognar le téméraire après avoir combattu le dragon Gueulefer pendant cent jours. Nous avons dressé ces pierres pour marquer l'endroit où il repose. »\n—Iskene, conteuse des Kannah",
+                  "language":"French",
+                  "name":"Prairie alpine",
+                  "text":"({T} : Ajoutez {R} ou {W}.)\nLa Prairie alpine arrive sur le champ de bataille engagée.",
+                  "type":"Terrain neigeux : montagne et plaine"
+               },
+               {
+                  "flavorText":"\"Qui perì Rognar il Temerario dopo la sua battaglia di cento giorni contro il Drago Fauce-di-Ferro. Abbiamo innalzato queste pietre per segnare il luogo del suo riposo.\"\n—Iskene, cantastorie Kannah",
+                  "language":"Italian",
+                  "name":"Prateria Alpina",
+                  "text":"({T}: Aggiungi {R} o {W}.)\nLa Prateria Alpina entra nel campo di battaglia TAPpata.",
+                  "type":"Terra Neve — Montagna Pianura"
+               },
+               {
+                  "flavorText":"「無謀者ログナーはここで死にました。百日間にもおよぶ鉄大口ドラゴンとの戦いの後に。この石は彼が眠る場所を記すために建てられました。」\n――カナーの語り部、イスキン",
+                  "language":"Japanese",
+                  "name":"高山の草地",
+                  "text":"（{T}：{R}か{W}を加える。）\n高山の草地はタップ状態で戦場に出る。",
+                  "type":"氷雪土地 — 山・平地"
+               },
+               {
+                  "flavorText":"\"무모한 로그나르는 강철아가리 용과 100일간 싸운 후 이곳에서 숨졌지. 그가 쉬고 있는 곳을 기리기 위해 이 돌들을 세워올렸어.\"\n—카나 이야기꾼, 이스킨",
+                  "language":"Korean",
+                  "name":"고산지대 목초지",
+                  "text":"({T}: {R} 또는 {W}를 추가한다.)\n고산지대 목초지는 탭된 채로 전장에 들어온다.",
+                  "type":"눈 대지 — 산 들"
+               },
+               {
+                  "flavorText":"\"Aqui pereceu Rognar, o Incansável, após uma batalha de cem dias contra o Dragão da Mandíbula de Ferro. Erguemos estas pedras para marcar seu lugar de descanso.\"\n— Iskene, contadora de histórias kannah",
+                  "language":"Portuguese (Brazil)",
+                  "name":"Prado Alpino",
+                  "text":"({T}: Adicione {R} ou {W}.)\nPrado Alpino entra no campo de batalha virado.",
+                  "type":"Terreno da Neve — Montanha Planície"
+               },
+               {
+                  "flavorText":"«Здесь пал Рогнар Безрассудный после стодневной битвы с драконом Железной Утробы. Мы воздвигли эти камни, чтобы отметить место его упокоения».\n— Искени, каннская сказительница",
+                  "language":"Russian",
+                  "name":"Горный Луг",
+                  "text":"({T}: добавьте {R} или {W}.)\nГорный Луг выходит на поле битвы повернутым.",
+                  "type":"Снежная Земля — Гора Равнина"
+               },
+               {
+                  "flavorText":"「勇莽洛格纳在与铁口巨龙大战百日之后咽气于此。我们在他安息之处周围设立石碑以资纪念。」\n～卡纳说书人伊斯琴",
+                  "language":"Chinese Simplified",
+                  "name":"高寒草地",
+                  "text":"（{T}：加{R}或{W}。）\n高寒草地须横置进战场。",
+                  "type":"雪境地 ～山脉／平原"
+               },
+               {
+                  "flavorText":"「勇莽洛格納在與鐵口巨龍大戰百日之後嚥氣於此。我們在他安息之處周圍設立石碑以資紀念。」\n～卡納說書人伊斯琴",
+                  "language":"Chinese Traditional",
+                  "name":"高寒草地",
+                  "text":"（{T}：加{R}或{W}。）\n高寒草地須橫置進戰場。",
+                  "type":"雪境地 ～山脈／平原"
+               }
+            ],
+            "identifiers":{
+               "scryfallOracleId":"8c281ebe-d9a1-48af-b58b-19c55aa4625b"
+            },
+            "layout":"normal",
+            "legalities":{
+               "alchemy":"Legal",
+               "brawl":"Legal",
+               "commander":"Legal",
+               "duel":"Legal",
+               "explorer":"Legal",
+               "future":"Legal",
+               "gladiator":"Legal",
+               "historic":"Legal",
+               "historicbrawl":"Legal",
+               "legacy":"Legal",
+               "modern":"Legal",
+               "pauper":"Legal",
+               "paupercommander":"Legal",
+               "pioneer":"Legal",
+               "standard":"Legal",
+               "vintage":"Legal"
+            },
+            "manaValue":0.0,
+            "name":"Alpine Meadow",
+            "printings":[
+               "KHM"
+            ],
+            "purchaseUrls":{
+               "cardKingdom":"https://mtgjson.com/links/082095f5e20a2b48",
+               "cardKingdomFoil":"https://mtgjson.com/links/9a28d8040ce18c6c",
+               "cardmarket":"https://mtgjson.com/links/3906812cbebeb947",
+               "tcgplayer":"https://mtgjson.com/links/c00ba68f8fdf203a"
+            },
+            "rulings":[
+               {
+                  "date":"2021-02-05",
+                  "text":"Snow is a supertype, not a card type. It has no rules meaning or function by itself, but spells and abilities may refer to it."
+               },
+               {
+                  "date":"2021-02-05",
+                  "text":"The {S} symbol is a generic mana symbol. It represents a cost that can be paid by one mana that was produced by a snow source. That mana can be any color or colorless."
+               },
+               {
+                  "date":"2021-02-05",
+                  "text":"Snow isn’t a type of mana. If an effect says you may spend mana as though it were any type, you can’t pay for {S} using mana that wasn’t produced by a snow source."
+               },
+               {
+                  "date":"2021-02-05",
+                  "text":"Some cards have additional effects for each {S} spent to cast them. You can cast these spells even if you don’t spend any snow mana to cast them; their additional effects simply won’t do anything."
+               },
+               {
+                  "date":"2021-02-05",
+                  "text":"The Kaldheim set doesn’t have any cards with mana costs that include {S}, but some previous sets do. If an effect says such a spell costs {1} less to cast, that reduction doesn’t apply to any {S} costs. This is also true for activated abilities that include {S} in their activation costs and effects that reduce those costs."
+               }
+            ],
+            "subtypes":[
+               "Mountain",
+               "Plains"
+            ],
+            "supertypes":[
+               "Snow"
+            ],
+            "text":"({T}: Add {R} or {W}.)\nAlpine Meadow enters the battlefield tapped.",
+            "type":"Snow Land — Mountain Plains",
+            "types":[
+               "Land"
+            ]
+         }
+      ],
+      "Archway Commons":[
+         {
+            "colorIdentity":[
+
+            ],
+            "colors":[
+
+            ],
+            "convertedManaCost":0.0,
+            "edhrecRank":5727,
+            "foreignData":[
+               {
+                  "language":"German",
+                  "name":"Bogengang-Allmende",
+                  "text":"Die Bogengang-Allmende kommt getappt ins Spiel.\nWenn die Bogengang-Allmende ins Spiel kommt, opfere sie, es sei denn, du bezahlst {1}.\n{T}: Erzeuge ein Mana einer beliebigen Farbe.",
+                  "type":"Land"
+               },
+               {
+                  "language":"Spanish",
+                  "name":"Plaza del arco",
+                  "text":"La Plaza del arco entra al campo de batalla girada.\nCuando la Plaza del arco entre al campo de batalla, sacrifícala a menos que pagues {1}.\n{T}: Agrega un maná de cualquier color.",
+                  "type":"Tierra"
+               },
+               {
+                  "language":"French",
+                  "name":"Place de l'arche",
+                  "text":"La Place de l'arche arrive sur le champ de bataille engagée.\nQuand la Place de l'arche arrive sur le champ de bataille, sacrifiez-la à moins que vous ne payiez {1}.\n{T} : Ajoutez un mana de la couleur de votre choix.",
+                  "type":"Terrain"
+               },
+               {
+                  "language":"Italian",
+                  "name":"Giardino dell'Arcata",
+                  "text":"Il Giardino dell'Arcata entra nel campo di battaglia TAPpato.\nQuando il Giardino dell'Arcata entra nel campo di battaglia, sacrificalo a meno che non paghi {1}.\n{T}: Aggiungi un mana di un qualsiasi colore.",
+                  "type":"Terra"
+               },
+               {
+                  "language":"Japanese",
+                  "name":"アーチ道の公共地",
+                  "text":"アーチ道の公共地はタップ状態で戦場に出る。\nアーチ道の公共地が戦場に出たとき、あなたが{1}を支払わないかぎり、これを生け贄に捧げる。\n{T}：好きな色１色のマナ１点を加える。",
+                  "type":"土地"
+               },
+               {
+                  "language":"Korean",
+                  "name":"아치길 공동구역",
+                  "text":"아치길 공동구역은 탭된 채로 전장에 들어온다.\n아치길 공동구역이 전장에 들어올 때, 당신이 {1}을 지불하지 않으면 아치길 공동구역을 희생한다.\n{T}: 원하는 색의 마나 한 개를 추가한다.",
+                  "type":"대지"
+               },
+               {
+                  "language":"Portuguese (Brazil)",
+                  "name":"Esplanada do Arco",
+                  "text":"Esplanada do Arco entra no campo de batalha virada.\nQuando Esplanada do Arco entrar no campo de batalha, sacrifique-a, a menos que você pague {1}.\n{T}: Adicione um mana de qualquer cor.",
+                  "type":"Terreno"
+               },
+               {
+                  "language":"Russian",
+                  "name":"Арочная Площадь",
+                  "text":"Арочная Площадь выходит на поле битвы повернутой.\nКогда Арочная Площадь выходит на поле битвы, пожертвуйте ее, если только вы не заплатите {1}.\n{T}: добавьте одну ману любого цвета.",
+                  "type":"Земля"
+               },
+               {
+                  "language":"Chinese Simplified",
+                  "name":"拱顶公地",
+                  "text":"拱顶公地须横置进战场。\n当拱顶公地进战场时，除非你支付{1}，否则牺牲之。\n{T}：加一点任意颜色的法术力。",
+                  "type":"地"
+               },
+               {
+                  "language":"Chinese Traditional",
+                  "name":"拱頂公地",
+                  "text":"拱頂公地須橫置進戰場。\n當拱頂公地進戰場時，除非你支付{1}，否則犧牲之。\n{T}：加一點任意顏色的魔法力。",
+                  "type":"地"
+               }
+            ],
+            "identifiers":{
+               "scryfallOracleId":"69c63055-ed44-4b32-b591-f3c6c2f3e7d1"
+            },
+            "layout":"normal",
+            "legalities":{
+               "alchemy":"Legal",
+               "brawl":"Legal",
+               "commander":"Legal",
+               "duel":"Legal",
+               "explorer":"Legal",
+               "future":"Legal",
+               "gladiator":"Legal",
+               "historic":"Legal",
+               "historicbrawl":"Legal",
+               "legacy":"Legal",
+               "modern":"Legal",
+               "pauper":"Legal",
+               "paupercommander":"Legal",
+               "penny":"Legal",
+               "pioneer":"Legal",
+               "standard":"Legal",
+               "vintage":"Legal"
+            },
+            "manaValue":0.0,
+            "name":"Archway Commons",
+            "printings":[
+               "STX"
+            ],
+            "purchaseUrls":{
+               "cardKingdom":"https://mtgjson.com/links/08a155c6963fe459",
+               "cardKingdomFoil":"https://mtgjson.com/links/c2b4ac3d821ce3d8",
+               "cardmarket":"https://mtgjson.com/links/1a5f31bb1da1652d",
+               "tcgplayer":"https://mtgjson.com/links/bd24a3177e0190e7"
+            },
+            "rulings":[
+
+            ],
+            "subtypes":[
+
+            ],
+            "supertypes":[
+
+            ],
+            "text":"Archway Commons enters the battlefield tapped.\nWhen Archway Commons enters the battlefield, sacrifice it unless you pay {1}.\n{T}: Add one mana of any color.",
+            "type":"Land",
+            "types":[
+               "Land"
+            ]
+         }
       ]
    }
 }
