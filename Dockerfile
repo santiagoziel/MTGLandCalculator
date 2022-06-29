@@ -1,11 +1,6 @@
 FROM python:3.9
 
-WORKDIR /code
+ADD redis_test_script.py /
+RUN pip install redis
 
-COPY Pipfile Pipfile.lock /code/
-RUN pip install --upgrade pip
-RUN pip install pipenv && pipenv install --system
-
-COPY . /code
-
-CMD ["python3", "./run.py"]
+CMD [ "python3", "./redis_test_script.py" ]

@@ -5,7 +5,6 @@ from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:tetingpas@137.184.133.90:5432/sandb'
 app.config['SECRET_KEY'] = "fortheloveofgodchangethis"
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)

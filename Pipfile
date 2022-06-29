@@ -16,6 +16,7 @@ flask-wtf = "*"
 wtforms = "*"
 email-validator = "*"
 psycopg2-binary = "*"
+redis = "*"
 
 [requires]
 python_version = "3.9"
