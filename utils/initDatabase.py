@@ -1,5 +1,6 @@
+import redis,json
 
-import json
+r = redis.Redis(host="localhost", port=6379, db=0)
 
 with open('cards\sampleAtomic.json', encoding="UTF-8") as f:
     data = json.load(f)
@@ -11,4 +12,7 @@ with open('cards\sampleAtomic.json', encoding="UTF-8") as f:
         for face in data["data"][f"{card}"]:
             cost += face["manaCost"] if "manaCost" in face else ""
             isLand = isLand if not "Land" in face["type"] else True
+
         print(name,rank,cost,isLand)
+        card = {"manaCost":f"{cost}", "isLand":f"{isLand}", "edhrank":rank}
+        r.hmset(name, card)

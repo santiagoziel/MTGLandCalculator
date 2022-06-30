@@ -16,7 +16,7 @@ W = 0
 U = 0
 B = 0
 L = 0
-with open("Deck - Obunn upgrades.txt", "r") as txt_file:
+with open("decks\Deck - Obunn upgrades.txt", "r") as txt_file:
     file_content = txt_file.read()
     content_list = file_content.split("\n")
     content_list = content_list [:-2]
