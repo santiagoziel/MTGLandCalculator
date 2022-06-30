@@ -10,6 +10,7 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 
 
 ## GOALS
+- [ ] handle annoying characters in names
 - [ ] get most important cards form txt file
 - [x] get color identity of txt file
 - [ ] get deck list that contain those cards (Almost done)
