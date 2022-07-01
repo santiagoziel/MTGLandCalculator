@@ -27,24 +27,23 @@ with open("../decks/Deck - redis deck test.txt", "r") as txt_file:
     content_list = content_list [:-2]
     for entry in content_list:
         amount, name = entry.split(" ",1)
-        print(f"amoutn: {amount}, card {name}")
         info = r.hgetall(name)
-        print(f"info: {info}")
-        # for card in range(int(x[:2])):
-#             symbols = checkColors(name)
-#             R += symbols.count("R")
-#             G += symbols.count("G")
-#             W += symbols.count("W")
-#             U += symbols.count("U")
-#             B += symbols.count("B")
-#             L += symbols.count("L")
-#
-# sum = R+G+W+U+B
-# print(f"R{R} G{G} W{W} U{U} B{B} sum{sum}")
-#
-# print("Tierras:")
-# print(f"R: {(R*L)/sum}")
-# print(f"G: {(G*L)/sum}")
-# print(f"W: {(W*L)/sum}")
-# print(f"U: {(U*L)/sum}")
-# print(f"B: {(B*L)/sum}")
+        print(f"Amount: {amount}, card {name} {info[b'isLand']}")
+        symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
+        amount = int(amount)
+        R += symbols.count("R") * amount
+        G += symbols.count("G") * amount
+        W += symbols.count("W") * amount
+        U += symbols.count("U") * amount
+        B += symbols.count("B") * amount
+        L += amount if info[b'isLand'] == b'True' else 0
+
+sum = R+G+W+U+B
+print(f"R{R} G{G} W{W} U{U} B{B} sum{sum}")
+
+print(f"Tierras: {L}")
+print(f"R: {(R*L)/sum}")
+print(f"G: {(G*L)/sum}")
+print(f"W: {(W*L)/sum}")
+print(f"U: {(U*L)/sum}")
+print(f"B: {(B*L)/sum}")
