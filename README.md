@@ -17,6 +17,8 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 - [ ] get lands from recommended decks
 - [x] generate basic recommendation
 - [ ] generate full recommendation
+- [ ] clean up decks folder
 
 ## After MVP
 - [ ] check txt format
+- [ ] generate unique string for deck file name
