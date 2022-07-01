@@ -1,5 +1,6 @@
-from flask import  render_template, url_for, redirect, flash
+from flask import  render_template, url_for, redirect, flash, request
 from flask_login import login_user, login_required, logout_user, current_user
+from werkzeug.utils import secure_filename
 
 from dta_pkt import app, login_manager, bcrypt, db
 from dta_pkt.forms import LogInForm,RegisterForm
@@ -26,6 +27,17 @@ def dashboard():
 def logout():
     logout_user()
     return redirect(url_for("home"))
+
+@app.route('/display', methods = ['GET', 'POST'])
+def save_file():
+    if request.method == 'POST':
+        f = request.files['file']
+        filename = secure_filename(f.filename)
+
+        f.save(app.config['UPLOAD_FOLDER'] + filename)
+        # TODO:  add process
+        # TODO: add clean up
+        return "1"
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
