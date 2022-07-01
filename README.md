@@ -9,7 +9,7 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 - [pipenv installed](https://pypi.org/project/pipenv/)
 
 
-## GOALS
+## TODO
 - [ ] handle annoying characters in names
 - [ ] get most important cards form txt file
 - [x] get color identity of txt file
@@ -17,3 +17,6 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 - [ ] get lands from recommended decks
 - [x] generate basic recommendation
 - [ ] generate full recommendation
+
+## After MVP
+- [ ] check txt format

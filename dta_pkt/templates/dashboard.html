@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Dashboard</title>
-  </head>
-  <body>
+{% extends "layout.html" %}
+{% block content %}
     <form action = "/display" method = "POST"
          enctype = "multipart/form-data" class = "file-upload-form">
          <h2>Procesador de Archivos</h2>
@@ -17,5 +13,4 @@
           </div>
       </form>
 <script src="./static/main.js"></script>
-  </body>
-</html>
+{% endblock %}

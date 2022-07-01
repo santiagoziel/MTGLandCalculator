@@ -66,15 +66,15 @@ function updateThumbnail(dropZoneElement, file) {
   }
 
   thumbnailElement.dataset.label = file.name;
-
-// si el archivo es un zip carga imagen exito, si no carga imagen error
-  if (file.type.startsWith("application/x-zip") || file.type.startsWith("application/zip") ) {
-    thumbnailElement.style.backgroundImage = "url(/static/LogoLowRes.png)";
+  console.log(file.type);
+// si el archivo es un txt carga imagen exito, si no carga imagen error
+  if (file.type.startsWith("text/plain")) {
+    thumbnailElement.style.backgroundImage = "url(/static/succes-logo.png)";
     document.getElementById("SendButton").classList.remove("disabled");
     document.getElementById("SendButton").disabled = false;
   } else {
     thumbnailElement.style.backgroundImage = "url(/static/error-web.png)";
-    thumbnailElement.dataset.label = "incorrect Format (Zip required)";
+    thumbnailElement.dataset.label = "incorrect Format (txt required)";
     document.getElementById("SendButton").classList.add("disabled");
     document.getElementById("SendButton").disabled = true;
   }

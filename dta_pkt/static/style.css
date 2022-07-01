@@ -1,0 +1,196 @@
+/* body */
+body {
+  background-color: #f1f1f9;
+  margin:0;
+}
+
+.file-upload-form{
+  min-width: 200px;
+  background-color: #ffffff;
+  margin: 7% 35%;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(179,186,198,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 20px;
+}
+
+.container{
+  min-width: 200px;
+  background-color: #ffffff;
+  margin: 2% 15%;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(179,186,198,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 20px;
+}
+
+/* Titles */
+h2 {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin: 10px;
+}
+h6 {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin: 10px;
+  color: #a4a4a4;
+}
+
+/* Top bar*/
+.topnav {
+  overflow: hidden;
+  background-color: #182642;
+  font-family: "Quicksand", sans-serif;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.navbar-right{
+  float: right;
+}
+
+.topnav img{
+   height:30px;
+}
+/* Drop Zone */
+.drop-zone {
+  margin: auto;
+  max-width: 200px;
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #547484;
+  border-radius: 10px;
+  background-color: #edf1f4;
+}
+.drop-zone:hover {
+  background-color : #bac0c9;
+  color : #f3f3f3
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #547484;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Buttons */
+
+.btn {
+background-color: #39546c;
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;
+padding: 12px 26%;
+}
+
+.btn2 {
+background-color: #39546c;
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;
+padding: 12px 40%;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.centerbtn {
+  text-align: center;
+}
+
+/* about page*/
+/*TODo: this has to be in its own page jesus fuck*/
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.team_Member {
+  padding: 0 16px;
+}
+
+.team_Member::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 28%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  margin-right:1%;
+  margin-left:3%
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}

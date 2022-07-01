@@ -1,4 +1,4 @@
-from flask import  render_template, url_for, redirect
+from flask import  render_template, url_for, redirect, flash
 from flask_login import login_user, login_required, logout_user, current_user
 
 from dta_pkt import app, login_manager, bcrypt, db
@@ -35,6 +35,7 @@ def login():
         if user:
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
+                flash('You were successfully logged in')
                 return redirect(url_for("dashboard"))
     return render_template("login.html", form = form)
 
