@@ -1,8 +1,9 @@
 import requests, re, time,redis
 
+r = redis.Redis(host="localhost", port=6379, db=0)
+
 def checkColors(name):
-    r = requests.get(f"https://api.scryfall.com/cards/named?exact={name}")
-    data = r.json()
+
     if "Land" in data["type_line"]:
         return "L"
     mana_cost = data["mana_cost"]
@@ -16,11 +17,13 @@ W = 0
 U = 0
 B = 0
 L = 0
-r = redis.Redis(host="localhost", port=6379, db=0)
+
 with open("../decks/Deck - redis deck test.txt", "r") as txt_file:
     file_content = txt_file.read()
     content_list = file_content.split("\n")
     #mtggoldfish adds two blank lines at the end of deck files for some reason
+    #so here i remove them
+    # TODO: check if other places do the same
     content_list = content_list [:-2]
     for entry in content_list:
         amount, name = entry.split(" ",1)
@@ -28,9 +31,7 @@ with open("../decks/Deck - redis deck test.txt", "r") as txt_file:
         info = r.hgetall(name)
         print(f"info: {info}")
         # for card in range(int(x[:2])):
-        #     print(card)
-#             time.sleep(.11)
-#             symbols = checkColors(f"{x[2:]}")
+#             symbols = checkColors(name)
 #             R += symbols.count("R")
 #             G += symbols.count("G")
 #             W += symbols.count("W")
