@@ -23,8 +23,8 @@ with open("../decks/Deck - redis deck test.txt", "r") as txt_file:
     content_list = file_content.split("\n")
     #mtggoldfish adds two blank lines at the end of deck files for some reason
     #so here i remove them
-    # TODO: check if other places do the same
-    content_list = content_list [:-2]
+    while("" in content_list) :
+        content_list.remove("")
     for entry in content_list:
         amount, name = entry.split(" ",1)
         info = r.hgetall(name)
