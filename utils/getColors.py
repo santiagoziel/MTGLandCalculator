@@ -11,39 +11,40 @@ def checkColors(name):
 
     return re.sub('[\{\}1-9]',"",manaString)
 
-R = 0
-G = 0
-W = 0
-U = 0
-B = 0
+colors = {
+"U" : 0,
+"B" : 0,
+"R" : 0,
+"G" : 0,
+"W" : 0,
+}
 L = 0
-
-with open("../decks/Deck - redis deck test.txt", "r") as txt_file:
+cardsRank = []
+with open("../decks/Deck_-_Boros_Aggro.txt", "r") as txt_file:
     file_content = txt_file.read()
     content_list = file_content.split("\n")
     #mtggoldfish adds two blank lines at the end of deck files for some reason
     #so here i remove them
     while("" in content_list) :
         content_list.remove("")
+
     for entry in content_list:
         amount, name = entry.split(" ",1)
+        #print(name)
         info = r.hgetall(name)
-        print(f"Amount: {amount}, card {name} {info[b'isLand']}")
+        #print(f"Amount: {amount}, card {name} {info[b'isLand']}")
+        cardsRank.append([name, int(info[b'edhrank'].decode('utf-8'))])
         symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
         amount = int(amount)
-        R += symbols.count("R") * amount
-        G += symbols.count("G") * amount
-        W += symbols.count("W") * amount
-        U += symbols.count("U") * amount
-        B += symbols.count("B") * amount
+        sum = 0
+        for key in colors:
+            colors[key] += symbols.count(key) * amount
+            sum += colors[key]
+
         L += amount if info[b'isLand'] == b'True' else 0
 
-sum = R+G+W+U+B
-print(f"R{R} G{G} W{W} U{U} B{B} sum{sum}")
-
-print(f"Tierras: {L}")
-print(f"R: {(R*L)/sum}")
-print(f"G: {(G*L)/sum}")
-print(f"W: {(W*L)/sum}")
-print(f"U: {(U*L)/sum}")
-print(f"B: {(B*L)/sum}")
+print(colors, L)
+[print(f"{key}: {(colors[key]*L)/sum}") for key in colors]
+coloridentity = ""
+[coloridentity := coloridentity + key for key in colors if colors[key] != 0]
+print(coloridentity)
