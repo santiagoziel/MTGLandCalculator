@@ -1,5 +1,5 @@
 import requests
 
-r = requests.get(f"https://api.scryfall.com/cards/named?exact=Sunrise Cavalier")
-data = r.json()
+response = requests.get(f"https://api.scryfall.com/cards/named?exact=Sunrise Cavalier")
+data = response.json()
 print(data)

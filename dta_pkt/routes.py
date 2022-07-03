@@ -8,6 +8,8 @@ from dta_pkt.forms import LogInForm,RegisterForm
 from dta_pkt.models import User
 
 from dta_pkt.utils.getColors import gen_color_identity
+from dta_pkt.utils.goldfishGetDecks import get_list_of_decks
+from dta_pkt.utils.goldfishCards import get_lands_list
 
 #if you try to enter a page that requires log in you will be redirected to login
 login_manager.login_view = "login"
@@ -40,11 +42,25 @@ def save_file():
         f.save(app.config['UPLOAD_FOLDER'] + filename)
         # TODO:  add process
         colors, L, coloridentity, total_symbols = gen_color_identity(filename)
-        print(colors, L)
-        [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
-        print(coloridentity)
+        # print(colors, L)
+        # [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
+        # print(coloridentity)
+        list_of_decks = get_list_of_decks(coloridentity)
+        print(list_of_decks)
+        land_list = {}
+        for deck in list_of_decks[0:2]:
+            deck_land_list = get_lands_list(deck)
+            for land in deck_land_list:
+                if land in land_list:
+                    land_list[land] = int(land_list[land]) + int(deck_land_list[land])
+                else:
+                    land_list[land] = deck_land_list[land]
+
+        sortedList = {landName: amount for landName, amount in sorted(land_list.items(), key=lambda item: int(item[1]), reverse=True)}
+        print(sortedList)
+        
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
-        return "1"
+        return render_template("dashboard.html", user = current_user)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():

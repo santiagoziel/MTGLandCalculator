@@ -1,8 +1,7 @@
 import requests, re, time,redis
 
-from dta_pkt import app
+from dta_pkt import app, r
 
-r = redis.Redis(host="localhost", port=6379, db=0)
 
 def checkColors(name):
 
