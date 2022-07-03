@@ -10,6 +10,8 @@ from dta_pkt.models import User
 from dta_pkt.utils.getColors import gen_color_identity
 from dta_pkt.utils.goldfishGetDecks import get_list_of_decks
 from dta_pkt.utils.goldfishCards import get_lands_list
+from dta_pkt.utils.recipies import take
+
 
 #if you try to enter a page that requires log in you will be redirected to login
 login_manager.login_view = "login"
@@ -57,8 +59,8 @@ def save_file():
                     land_list[land] = deck_land_list[land]
 
         sortedList = {landName: amount for landName, amount in sorted(land_list.items(), key=lambda item: int(item[1]), reverse=True)}
-        print(sortedList)
-        
+        n_items = take(4, sortedList.items())
+        print(n_items)
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return render_template("dashboard.html", user = current_user)
 
