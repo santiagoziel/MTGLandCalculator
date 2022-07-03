@@ -1,10 +1,13 @@
 from flask import  render_template, url_for, redirect, flash, request
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.utils import secure_filename
+import os
 
 from dta_pkt import app, login_manager, bcrypt, db
 from dta_pkt.forms import LogInForm,RegisterForm
 from dta_pkt.models import User
+
+from dta_pkt.utils.getColors import gen_color_identity
 
 #if you try to enter a page that requires log in you will be redirected to login
 login_manager.login_view = "login"
@@ -36,7 +39,11 @@ def save_file():
 
         f.save(app.config['UPLOAD_FOLDER'] + filename)
         # TODO:  add process
-        # TODO: add clean up
+        colors, L, coloridentity, total_symbols = gen_color_identity(filename)
+        print(colors, L)
+        [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
+        print(coloridentity)
+        os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return "1"
 
 @app.route("/login", methods=['GET', 'POST'])
