@@ -22,3 +22,4 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 ## After MVP
 - [ ] check txt format
 - [ ] generate unique string for deck file name
+- [ ] show multiple faces of double cards

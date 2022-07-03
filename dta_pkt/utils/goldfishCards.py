@@ -31,5 +31,5 @@ def get_lands_list(deck):
         info = redisdb.hgetall(data)
         #print(f"card: {data} has {number} copies is {'' if info[b'isLand'] == b'True' else 'not'} a land")
         if info[b'isLand'] == b'True':
-            list_of_lands[data] = number
+            list_of_lands[data] = int(number)
     return list_of_lands

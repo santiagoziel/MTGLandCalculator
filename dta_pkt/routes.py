@@ -1,7 +1,9 @@
 from flask import  render_template, url_for, redirect, flash, request
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.utils import secure_filename
+
 import os
+from collections import Counter
 
 from dta_pkt import app, login_manager, bcrypt, db
 from dta_pkt.forms import LogInForm,RegisterForm
@@ -49,18 +51,14 @@ def save_file():
         # print(coloridentity)
         list_of_decks = get_list_of_decks(coloridentity)
         print(list_of_decks)
-        land_list = {}
+        land_list = []
         for deck in list_of_decks[0:2]:
-            deck_land_list = get_lands_list(deck)
-            for land in deck_land_list:
-                if land in land_list:
-                    land_list[land] = int(land_list[land]) + int(deck_land_list[land])
-                else:
-                    land_list[land] = deck_land_list[land]
+            land_list.append(get_lands_list(deck))
+        counter = Counter()
+        for d in land_list:
+            counter.update(d)
 
-        sortedList = {landName: amount for landName, amount in sorted(land_list.items(), key=lambda item: int(item[1]), reverse=True)}
-        n_items = take(4, sortedList.items())
-        print(n_items)
+        print(counter.most_common(5))
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return render_template("dashboard.html", user = current_user)
 
