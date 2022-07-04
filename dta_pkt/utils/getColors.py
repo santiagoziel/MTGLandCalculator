@@ -30,13 +30,14 @@ def gen_color_identity(deckName):
         while("" in content_list) :
             content_list.remove("")
 
+        # TODO: add support for commander changing this to 99
+        target_amount = 60
         for index, entry in enumerate(content_list, start = 1):
             amount, name = entry.split(" ",1)
-            print(name)
             info = r.hgetall(name)
             symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
-            print(f"{name} has symbols {symbols}")
             amount = int(amount)
+            target_amount -= amount
             sum = 0
             for key in colors:
                 colors[key] += symbols.count(key) * amount
@@ -44,9 +45,13 @@ def gen_color_identity(deckName):
 
             L += amount if info[b'isLand'] == b'True' else 0
 
-        L += 60 - index
+        #L += target_amount
 
     coloridentity = ""
     [coloridentity := coloridentity + key for key in colors if colors[key] != 0]
 
-    return colors, L, coloridentity, sum
+    colors["total"] = sum
+    lands = {key: round((colors[key]*L)/sum,2) for key in colors}
+    lands["total"] = L
+
+    return colors, lands, coloridentity

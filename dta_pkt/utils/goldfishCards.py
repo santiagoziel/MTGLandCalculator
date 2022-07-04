@@ -30,6 +30,6 @@ def get_lands_list(deck):
         data = card.find("span", {'class':'card_id card_name'}).find("a").string.strip()
         info = redisdb.hgetall(data)
         #print(f"card: {data} has {number} copies is {'' if info[b'isLand'] == b'True' else 'not'} a land")
-        if info[b'isLand'] == b'True':
+        if info[b'isLand'] == b'True' and info[b'isBasic'] == b'False':
             list_of_lands[data] = int(number)
     return list_of_lands

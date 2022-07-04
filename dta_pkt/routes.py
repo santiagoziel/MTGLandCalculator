@@ -45,13 +45,10 @@ def save_file():
 
         f.save(app.config['UPLOAD_FOLDER'] + filename)
 
-        colors, L, coloridentity, total_symbols = gen_color_identity(filename)
-        print(colors, L)
-        [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
-        print(coloridentity)
+        colors, lands, coloridentity = gen_color_identity(filename)
         #scraping mtggoldfish for decks with same color identity
         list_of_decks = get_list_of_decks(coloridentity)
-        #counting the 5 most common lands in those decks
+        #counting the 5 most common non basic lands in those decks
         land_list = []
         for deck in list_of_decks[0:4]:
             land_list.append(get_lands_list(deck))
@@ -61,7 +58,7 @@ def save_file():
 
         display_info = gen_display_info(counter.most_common(5))
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
-        return render_template("display.html", display_info = display_info)
+        return render_template("display.html", display_info = display_info, colors = colors, lands = lands)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
