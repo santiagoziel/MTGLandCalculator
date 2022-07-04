@@ -26,6 +26,10 @@ def load_user(user_id):
 def home():
     return render_template("home.html")
 
+@app.route("/del", methods=['GET', 'POST'])
+def del_page():
+    return render_template("del.html")
+
 @app.route("/dashboard", methods=['GET', 'POST'])
 @login_required
 def dashboard():
@@ -56,7 +60,7 @@ def save_file():
         for d in land_list:
             counter.update(d)
 
-        display_info = gen_display_info(counter.most_common(5))
+        display_info = gen_display_info(counter.most_common(6))
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return render_template("display.html", display_info = display_info, colors = colors, lands = lands)
 

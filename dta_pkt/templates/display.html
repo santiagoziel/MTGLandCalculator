@@ -2,36 +2,46 @@
 {% block content %}
 <style>
   .wrapper {
+    margin-left: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
   .distribution {
+    margin-left: 30px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
+  .mana-symbol{
+    height: 1em;
+    width: auto;
+    display: inline-block;
+  }
 </style>
-<h2> Total number of symbols: {{colors.total}}</h2>
-<h2>Symbols Distribution</h2>
-<div class="distribution">
-  <h4 style="grid-column: 1; grid-row: 1;">U: {{colors.U}}</h4>
-  <h4 style="grid-column: 2; grid-row: 1;">B: {{colors.B}}</h4>
-  <h4 style="grid-column: 3; grid-row: 1;">R: {{colors.R}}</h4>
-  <h4 style="grid-column: 4; grid-row: 1;">G: {{colors.G}}</h4>
-  <h4 style="grid-column: 5; grid-row: 1;">W: {{colors.W}}</h4>
+<h1>Distribution</h1>
+<div class = "section">
+  <h2 style="text-align: left;"> Total number of symbols: {{colors.total}}</h2>
+  <h2 style="text-align: left;">Symbols Distribution</h2>
+  <div class="distribution">
+    <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="static/U.png"> {{colors.U}}</h4>
+    <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="static/R.png"> {{colors.R}}</h4>
+    <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="static/B.png"> {{colors.B}}</h4>
+    <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="static/G.png"> {{colors.G}}</h4>
+    <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="static/W.png"> {{colors.W}}</h4>
+  </div>
 </div>
 
-<h2> Total number Lands: {{lands.total}}</h2>
-<h2>All Basic Lands recomendation</h2>
+<h2 style="text-align: left;"> Total number Lands: {{lands.total}}</h2>
+<h2 style="text-align: left;">All Basic Lands recomendation</h2>
 <div class="distribution">
-  <h4 style="grid-column: 1; grid-row: 1;">U: {{lands.U}}</h4>
-  <h4 style="grid-column: 2; grid-row: 1;">B: {{lands.B}}</h4>
-  <h4 style="grid-column: 3; grid-row: 1;">R: {{lands.R}}</h4>
-  <h4 style="grid-column: 4; grid-row: 1;">G: {{lands.G}}</h4>
-  <h4 style="grid-column: 5; grid-row: 1;">W: {{lands.W}}</h4>
+  <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="static/U.png"> {{lands.U}}</h4>
+  <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="static/B.png"> {{lands.B}}</h4>
+  <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="static/R.png"> {{lands.R}}</h4>
+  <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="static/G.png"> {{lands.G}}</h4>
+  <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="static/W.png"> {{lands.W}}</h4>
 </div>
 
 <h1>Non basic lands used in similar decks</h1>
