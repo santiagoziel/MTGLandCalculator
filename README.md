@@ -11,13 +11,13 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 
 ## TODO
 - [ ] handle annoying characters in names
-- [ ] get most important cards form txt file
+- [x] get most important cards form txt file
 - [x] get color identity of txt file
 - [x] get deck list that contain those cards
-- [ ] get lands from recommended decks
+- [x] get lands from recommended decks
 - [x] generate basic recommendation
 - [ ] generate full recommendation
-- [ ] clean up decks folder
+- [x] clean up decks folder
 
 ## After MVP
 - [ ] check txt format
