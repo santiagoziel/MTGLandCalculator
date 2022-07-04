@@ -25,14 +25,11 @@ def gen_color_identity(deckName):
     with open(app.config["UPLOAD_FOLDER"] + deckName, "r") as txt_file:
         file_content = txt_file.read()
         content_list = file_content.split("\n")
-        #mtggoldfish adds two blank lines at the end of deck files for some reason
-        #so here i remove them
-        while("" in content_list) :
-            content_list.remove("")
-
         # TODO: add support for commander changing this to 99
         target_amount = 60
         for index, entry in enumerate(content_list, start = 1):
+            if entry == "":
+                break
             amount, name = entry.split(" ",1)
             info = r.hgetall(name)
             symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
@@ -45,7 +42,7 @@ def gen_color_identity(deckName):
 
             L += amount if info[b'isLand'] == b'True' else 0
 
-        #L += target_amount
+        L += target_amount if target_amount > 0 else 0
 
     coloridentity = ""
     [coloridentity := coloridentity + key for key in colors if colors[key] != 0]
