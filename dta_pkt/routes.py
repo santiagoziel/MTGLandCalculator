@@ -49,10 +49,11 @@ def save_file():
         print(colors, L)
         [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
         print(coloridentity)
+        #scraping mtggoldfish for decks with same color identity
         list_of_decks = get_list_of_decks(coloridentity)
-        #print(list_of_decks)
+        #counting the 5 most common lands in those decks
         land_list = []
-        for deck in list_of_decks[0:2]:
+        for deck in list_of_decks[0:4]:
             land_list.append(get_lands_list(deck))
         counter = Counter()
         for d in land_list:

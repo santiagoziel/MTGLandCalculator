@@ -2,12 +2,13 @@ import requests, json, math
 
 #lands = [('Blightstep Pathway', 8), ('Clearwater Pathway', 8), ("Xander's Lounge", 8), ('Riverglide Pathway', 6), ('Haunted Ridge', 4)]
 class Land:
-    def __init__(self, name, age, image, column, row):
+    def __init__(self, name, age, image, column, row, purchace_link):
         self.name = name
         self.price = age
         self.image = image
         self.column = column
         self.row = row
+        self.purchace_link = purchace_link
     def __repr__(self):
         return f"Land(Name: {self.name}, Price: {self.price})"
 
@@ -25,8 +26,8 @@ def gen_display_info(lands):
         row = math.ceil(index/desired_columns)
         column = index -((row - 1) * desired_columns)
         if "card_faces" in card:
-            displayCard = Land(card["name"], card["prices"]['usd'], card["card_faces"][0]["image_uris"]["normal"], column, row)
+            displayCard = Land(card["name"], card["prices"]['usd'], card["card_faces"][0]["image_uris"]["normal"], column, row, card["purchase_uris"]["tcgplayer"])
         else:
-            displayCard = Land(card["name"], card["prices"]['usd'], card["image_uris"]["normal"], column, row)
+            displayCard = Land(card["name"], card["prices"]['usd'], card["image_uris"]["normal"], column, row, card["purchase_uris"]["tcgplayer"])
         displayinfo.append(displayCard)
     return displayinfo

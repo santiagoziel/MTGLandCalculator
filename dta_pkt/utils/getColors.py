@@ -30,7 +30,7 @@ def gen_color_identity(deckName):
         while("" in content_list) :
             content_list.remove("")
 
-        for entry in content_list:
+        for index, entry in enumerate(content_list, start = 1):
             amount, name = entry.split(" ",1)
             print(name)
             info = r.hgetall(name)
@@ -43,6 +43,8 @@ def gen_color_identity(deckName):
                 sum += colors[key]
 
             L += amount if info[b'isLand'] == b'True' else 0
+
+        L += 60 - index
 
     coloridentity = ""
     [coloridentity := coloridentity + key for key in colors if colors[key] != 0]

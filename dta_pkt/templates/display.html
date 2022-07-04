@@ -8,13 +8,13 @@
     grid-auto-rows: minmax(100px, auto);
   }
 </style>
-<h1>Most common lands usen in similar decks</h1>
+<h1>Non basic lands used in similar decks</h1>
 <div class="wrapper">
 {% for card in display_info %}
 <div style="grid-column: {{card.column}}; grid-row: {{card.row}};">
   <h3>{{card.name}}</h3>
-  <img src="{{card.image}}" width="252" height="352">
-  <h5>{{card.price}}</h5>
+  <a href="{{card.purchace_link}}" target="_blank"><img src="{{card.image}}" width="252" height="352"></a>
+  <h5>$ USD {{card.price}}</h5>
 </div>
 {% endfor %}
 </div>
