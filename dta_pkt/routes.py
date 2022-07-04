@@ -44,13 +44,13 @@ def save_file():
         filename = secure_filename(f.filename)
 
         f.save(app.config['UPLOAD_FOLDER'] + filename)
-        # TODO:  add process
+
         colors, L, coloridentity, total_symbols = gen_color_identity(filename)
-        # print(colors, L)
-        # [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
-        # print(coloridentity)
+        print(colors, L)
+        [print(f"{key}: {(colors[key]*L)/total_symbols}") for key in colors]
+        print(coloridentity)
         list_of_decks = get_list_of_decks(coloridentity)
-        print(list_of_decks)
+        #print(list_of_decks)
         land_list = []
         for deck in list_of_decks[0:2]:
             land_list.append(get_lands_list(deck))
@@ -59,9 +59,9 @@ def save_file():
             counter.update(d)
 
         display_info = gen_display_info(counter.most_common(5))
-        print(display_info)
+        #print(display_info)
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
-        return render_template("dashboard.html", user = current_user)
+        return render_template("display.html", display_info = display_info)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>display</h1>
+{% for card in display_info %}
+  <h3>{{card.name}}</h3>
+  <img src="{{card.image}}" width="315" height="440">
+  <h5>{{card.price}}</h5>
+{% endfor %}
+{% endblock %}

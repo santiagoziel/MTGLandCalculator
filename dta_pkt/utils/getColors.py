@@ -1,4 +1,4 @@
-import requests, re, time,redis
+import requests, re, time
 
 from dta_pkt import app, r
 
@@ -12,16 +12,19 @@ def checkColors(name):
 
     return re.sub('[\{\}1-9]',"",manaString)
 
-colors = {
-"U" : 0,
-"B" : 0,
-"R" : 0,
-"G" : 0,
-"W" : 0,
-}
+
 def gen_color_identity(deckName):
     L = 0
-    cardsRank = []
+    colors = {
+    "U" : 0,
+    "B" : 0,
+    "R" : 0,
+    "G" : 0,
+    "W" : 0,
+    }
+    print("-----------------------------")
+    print(deckName)
+    print("-----------------------------")
     with open(app.config["UPLOAD_FOLDER"] + deckName, "r") as txt_file:
         file_content = txt_file.read()
         content_list = file_content.split("\n")
@@ -32,11 +35,11 @@ def gen_color_identity(deckName):
 
         for entry in content_list:
             amount, name = entry.split(" ",1)
-            #print(name)
+            print(name)
             info = r.hgetall(name)
             #print(f"Amount: {amount}, card {name} {info[b'isLand']}")
-            cardsRank.append([name, int(info[b'edhrank'].decode('utf-8'))])
             symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
+            print(f"{name} has symbols {symbols}")
             amount = int(amount)
             sum = 0
             for key in colors:
