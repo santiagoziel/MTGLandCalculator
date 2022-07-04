@@ -12,7 +12,7 @@ from dta_pkt.models import User
 from dta_pkt.utils.getColors import gen_color_identity
 from dta_pkt.utils.goldfishGetDecks import get_list_of_decks
 from dta_pkt.utils.goldfishCards import get_lands_list
-from dta_pkt.utils.recipies import take
+from dta_pkt.utils.getDisplayInfo import gen_display_info
 
 
 #if you try to enter a page that requires log in you will be redirected to login
@@ -58,7 +58,8 @@ def save_file():
         for d in land_list:
             counter.update(d)
 
-        print(counter.most_common(5))
+        display_info = gen_display_info(counter.most_common(5))
+        print(display_info)
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return render_template("dashboard.html", user = current_user)
 
