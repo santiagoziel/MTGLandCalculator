@@ -22,9 +22,6 @@ def gen_color_identity(deckName):
     "G" : 0,
     "W" : 0,
     }
-    print("-----------------------------")
-    print(deckName)
-    print("-----------------------------")
     with open(app.config["UPLOAD_FOLDER"] + deckName, "r") as txt_file:
         file_content = txt_file.read()
         content_list = file_content.split("\n")
@@ -37,7 +34,6 @@ def gen_color_identity(deckName):
             amount, name = entry.split(" ",1)
             print(name)
             info = r.hgetall(name)
-            #print(f"Amount: {amount}, card {name} {info[b'isLand']}")
             symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
             print(f"{name} has symbols {symbols}")
             amount = int(amount)

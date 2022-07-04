@@ -59,7 +59,6 @@ def save_file():
             counter.update(d)
 
         display_info = gen_display_info(counter.most_common(5))
-        #print(display_info)
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
         return render_template("display.html", display_info = display_info)
 
