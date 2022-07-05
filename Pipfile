@@ -17,6 +17,8 @@ wtforms = "*"
 email-validator = "*"
 psycopg2-binary = "*"
 redis = "*"
+flask-socketio = "*"
+simple-websocket = "*"
 
 [requires]
 python_version = "3.9"
