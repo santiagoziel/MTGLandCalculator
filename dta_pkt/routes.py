@@ -18,10 +18,7 @@ import os, random, pickle
 def dashboard():
     form = deckUploadForm()
     if form.validate_on_submit():
-        id = random.randint(0,100000)
-        print("##########################")
-        print(id)
-        print("##########################")
+        id = random.randint(1,100000)
         filename = secure_filename(form.file.data.filename)
         form.file.data.save(app.config['UPLOAD_FOLDER'] + filename)
         #gen an id numner
