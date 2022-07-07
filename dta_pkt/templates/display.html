@@ -26,22 +26,22 @@
   <h2 style="text-align: left;"> Total number of symbols: {{colors.total}}</h2>
   <h2 style="text-align: left;">Symbols Distribution</h2>
   <div class="distribution">
-    <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="static/U.png"> {{colors.U}}</h4>
-    <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="static/R.png"> {{colors.R}}</h4>
-    <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="static/B.png"> {{colors.B}}</h4>
-    <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="static/G.png"> {{colors.G}}</h4>
-    <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="static/W.png"> {{colors.W}}</h4>
+    <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='U.png') }}"> {{colors.U}}</h4>
+    <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='B.png') }}"> {{colors.B}}</h4>
+    <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='R.png') }}"> {{colors.R}}</h4>
+    <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='G.png') }}"> {{colors.G}}</h4>
+    <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='W.png') }}"> {{colors.W}}</h4>
   </div>
 </div>
 
 <h2 style="text-align: left;"> Total number Lands: {{lands.total}}</h2>
 <h2 style="text-align: left;">All Basic Lands recomendation</h2>
 <div class="distribution">
-  <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="static/U.png"> {{lands.U}}</h4>
-  <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="static/B.png"> {{lands.B}}</h4>
-  <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="static/R.png"> {{lands.R}}</h4>
-  <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="static/G.png"> {{lands.G}}</h4>
-  <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="static/W.png"> {{lands.W}}</h4>
+  <h4 style="grid-column: 1; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='U.png') }}"> {{lands.U}}</h4>
+  <h4 style="grid-column: 2; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='B.png') }}"> {{lands.B}}</h4>
+  <h4 style="grid-column: 3; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='R.png') }}"> {{lands.R}}</h4>
+  <h4 style="grid-column: 4; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='G.png') }}"> {{lands.G}}</h4>
+  <h4 style="grid-column: 5; grid-row: 1;"><img class="mana-symbol" src="{{ url_for('static', filename='W.png') }}"> {{lands.W}}</h4>
 </div>
 
 <h1>Non basic lands used in similar decks</h1>

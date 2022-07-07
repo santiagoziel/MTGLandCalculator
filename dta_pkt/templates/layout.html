@@ -21,12 +21,6 @@
   <nav class="topnav">
     <a class="{{'active' if title == 'dashboard' }}"href="{{ url_for('dashboard') }}">Home</a>
     <div class="navbar-right">
-    {% if current_user.is_authenticated %}
-        <a href="{{url_for('logout')}}">cerrar sesion</a><br />
-    {% else %}
-        <a class="{{'active' if title == 'login' }}"href="{{ url_for('login') }}">Login</a>
-        <a class="{{'active' if title == 'register' }}"href="{{ url_for('register') }}">Register</a>
-    {% endif %}
     </div>
   </nav>
   {% with messages = get_flashed_messages(with_categories=true) %}

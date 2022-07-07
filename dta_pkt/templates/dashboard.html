@@ -1,19 +1,16 @@
-{% extends "layout.html" %}
-{% block content %}
-    <form action = "/display" method = "POST"
-         enctype = "multipart/form-data" class = "file-upload-form">
-         <h2>Land Calculator</h2>
-         <h6>Deck list as a txt file</h6>
-          <div class="drop-zone">
-            <span class="drop-zone__prompt">Arrastra aqui tus archivos o haz click para elejir uno</span>
-            <input type="file" name="file" class="drop-zone__input">
-          </div>
-          <div class = "centerbtn">
-            <input type = "submit" id = "SendButton" class = "btn disabled" disabled>
-          </div>
-      </form>
-<script src="./static/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="./static/chat.js"></script>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {{ form.hidden_tag() }}
+      {{ form.file }}
+      <input id= "submitbutton" type="button" value="send">
+  </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+  <script src="./static/progBar.js"></script>
+  </body>
+</html>
