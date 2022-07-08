@@ -3,6 +3,8 @@ gets a list of mtg goldfish decks that coointain certain cards
 '''
 
 import requests
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from bs4 import BeautifulSoup
 # TODO: get date range
 # TODO: ask for format
@@ -44,6 +46,9 @@ deckNames = {
 "UBRGW":"5 color"
 }
 url = "https://www.mtggoldfish.com/deck_searches/create?"
+#todo make this a variable set when uploading deck
+d = datetime.today()
+pastd = d + relativedelta(months=-3)
 def get_list_of_decks(coloridentity):
     payload = {
     "utf8" : "✓",
@@ -51,7 +56,7 @@ def get_list_of_decks(coloridentity):
     "deck_search[format]" : format,
     "deck_search[types][]": "user, tournament",
     "deck_search[player]":"",
-    "deck_search[date_range]":"04/01/2022+-+07/01/2022",
+    "deck_search[date_range]":f"{pastd.month:02d}/{pastd.day:02d}/{pastd.year}+-+{d.month:02d}/{d.day:02d}/{d.year}",
     "counter":"2",
     "commit":"Search",
     "deck_search[deck_search_card_filters_attributes][0][card]":"",
