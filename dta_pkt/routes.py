@@ -24,9 +24,9 @@ def dashboard():
         #here in reality in puting stuff into the db unde rthe id
         socketio.emit("updateBar", {"status" :5, "message": "Getting Color identity"})
         colors, lands, coloridentity = gen_color_identity(filename)
-        socketio.emit("updateBar", {"status" :15, "message": "Getting Similar Decks"})
+        socketio.emit("updateBar", {"status" :15, "message": "Getting Recent Similar Decks"})
         list_of_decks = get_list_of_decks(coloridentity)
-        socketio.emit("updateBar", {"status" :25, "message": "Scraping Similar decks"})
+        socketio.emit("updateBar", {"status" :25, "message": "Scraping List of Similar decks"})
         land_list = []
         for i, deck in enumerate(list_of_decks[0:5], 1):
             land_list.append(get_lands_list(deck))
@@ -34,7 +34,7 @@ def dashboard():
         counter = Counter()
         for d in land_list:
             counter.update(d)
-        socketio.emit("updateBar", {"status" :85, "message": "Rendering Info"})
+        socketio.emit("updateBar", {"status" :85, "message": "Getting display info from Scryfall"})
         display_info = gen_display_info(counter.most_common(6))
         os.remove(app.config['UPLOAD_FOLDER'] + filename)
 

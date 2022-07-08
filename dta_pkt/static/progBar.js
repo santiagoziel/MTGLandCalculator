@@ -32,7 +32,7 @@ elem.onclick = function(){
 
   updatePlace.insertAdjacentHTML(
     'beforeend',
-  `<h3 class="updateMessage" id="updateMessage"> Reading File </h3>`,
+  `<h3 class="updateMessage" id="updateMessage"> Reading txt Deck File </h3>`,
 );
 
   const request = new XMLHttpRequest();

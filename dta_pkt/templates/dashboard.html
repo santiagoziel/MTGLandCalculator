@@ -2,7 +2,8 @@
 {% block content %}
     <form action="" method="post" enctype = "multipart/form-data" class = "file-upload-form">
       <h2>Land Calculator</h2>
-      <h6>Deck list as a txt file</h6>
+      <h6>Prototype: Works only with standard cards</h6>
+      <h6>Tested with decklist from mtgGoldfish</h6>
       {{ form.hidden_tag() }}
       <div class="drop-zone">
       <span class="drop-zone__prompt">Drag a Deck txt file or click to chose one</span>
