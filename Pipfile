@@ -14,6 +14,7 @@ wtforms = "*"
 redis = "*"
 flask-socketio = "*"
 python-dateutil = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.9"

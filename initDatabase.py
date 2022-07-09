@@ -1,8 +1,8 @@
 import redis,json
 
-r = redis.Redis(host="localhost", port=6379, db=0)
+r = redis.Redis(host="db", port=6379, db=0)
 basicLands = ["Forest", "Island", "Mountain", "Plains", "Swamp", "Snow-Covered Forest", "Snow-Covered Island", "Snow-Covered Mountain", "Snow-Covered Plains", "Snow-Covered Swamp"]
-with open('../../cards/StandardAtomic.json', encoding="UTF-8") as f:
+with open('cards/StandardAtomic.json', encoding="UTF-8") as f:
     data = json.load(f)
     for card in data["data"]:
         name = card.split(" // ")[0] #because i want full name for split cards

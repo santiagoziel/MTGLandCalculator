@@ -1,6 +1,15 @@
 FROM python:3.9
 
-ADD redis_test_script.py /
-RUN pip install redis
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-CMD [ "python3", "./redis_test_script.py" ]
+WORKDIR /code
+
+COPY Pipfile Pipfile.lock /code/
+RUN pip install --upgrade pip
+RUN pip install pipenv && pipenv install --skip-lock --system
+
+COPY . /code/
+
+CMD [ "python3", ".\initDatabase.py" ]
+CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "run:app"]
