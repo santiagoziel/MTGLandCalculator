@@ -83,7 +83,7 @@ profile_default/
 ipython_config.py
 
 # specific files
-/cards/StandardAtomic.json
+/cards/StandardAtomicfgh.json
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is

@@ -6,9 +6,9 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 COPY Pipfile Pipfile.lock /code/
-RUN pip install --upgrade pip
-RUN pip install pipenv && pipenv install --skip-lock --system
+RUN pip3 install --upgrade pip
+RUN pip3 install pipenv && pipenv install --system
 
 COPY . /code/
 
-CMD ["python3", "./run.py"]
+CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "run:app"]
