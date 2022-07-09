@@ -32,6 +32,9 @@ def gen_color_identity(deckName):
                 break
             amount, name = entry.split(" ",1)
             info = r.hgetall(name)
+            print("#################")
+            print(info)
+            print("#################")
             symbols = re.sub('[\{\}1-9]','',info[b'manaCost'].decode('utf-8'))
             amount = int(amount)
             target_amount -= amount

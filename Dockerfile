@@ -11,5 +11,4 @@ RUN pip install pipenv && pipenv install --skip-lock --system
 
 COPY . /code/
 
-CMD [ "python3", ".\initDatabase.py" ]
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "run:app"]
+CMD ["python3", "./run.py"]
