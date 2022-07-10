@@ -9,7 +9,7 @@ built using the [scryfall API](https://scryfall.com/docs/api) and getting info f
 - [pipenv installed](https://pypi.org/project/pipenv/)
 
 ## MVP DONE!
-
+- you can find it [here!](https://mtg.santiagotorres.online/)
 ## After MVP
 - [ ] check txt format
 - [ ] generate unique string for deck file name
