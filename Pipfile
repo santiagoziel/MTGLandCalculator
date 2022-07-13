@@ -15,6 +15,7 @@ redis = "*"
 flask-socketio = "*"
 python-dateutil = "*"
 gunicorn = "*"
+eventlet = "==0.30.2"
 
 [requires]
 python_version = "3.9"
