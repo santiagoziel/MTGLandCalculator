@@ -11,4 +11,4 @@ RUN pip3 install pipenv && pipenv install --system
 
 COPY . /code/
 
-CMD ["gunicorn"  , "--worker-class", "eventlet", "-w", "1", "--bind", "0.0.0.0:8069", "run:app"]
+CMD ["gunicorn"  , "--worker-class", "eventlet", "-w", "1", "--bind", "0.0.0.0:8000", "run:app"]
